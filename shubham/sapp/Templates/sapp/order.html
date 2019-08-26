@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% extends "MyApp/base.html" %}
+    {% block title %}Track Order{%endblock%}
+    {%block content%}
+    <p>
+     Dear {{person_name}}
+    </p>
+Thanks for placing order with us. It will ship on {{ship_date|date:"F j,Y"}}.
+    </p>
+Here are the items, you ordered:{{item_list}}
+
+{% for item in item_list %}
+    <ul>
+    <li>{{item}}</li>
+    </ul>
+{% endfor %}
+{%endblock%}
+</head>
+<body>
+
+</body>
+</html>

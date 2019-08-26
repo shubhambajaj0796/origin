@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <h1>welcome</h1>
+</head>
+<body>
+<div>
+    <img src="{%static 'images/footer/footer6.jpg'%}"alt="sample" style="width:10%;" >
+</div>
+    <div class ="bging" id="content">
+      {% block content %}{% endblock %}
+    </div>
+
+</body>
+</html>

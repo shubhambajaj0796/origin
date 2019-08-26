@@ -1,0 +1,20 @@
+{% extends "sapp/base.html" %}
+{% load static %}
+{% block title %}My Form{% endblock %}
+
+{% block content %}
+<form  method="POST">
+
+     {% csrf_token %}
+
+     {{form.as_p}}
+
+    <input type="submit" value = "Submit">
+
+
+
+<img src="{% static 'images/footer/footer1.jpg' %}" alt=" " height="1000" width="1000"/>
+</form>
+
+{% endblock %}
+
